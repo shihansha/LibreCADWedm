@@ -32,6 +32,29 @@
     </message>
 </context>
 <context>
+    <name>DlgParabola</name>
+    <message>
+        <source>Parabola</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Geometry</source>
+        <translation type="unfinished">Геометрія</translation>
+    </message>
+    <message>
+        <source>Points on Spline</source>
+        <translation type="unfinished">Точки на сплайні</translation>
+    </message>
+    <message>
+        <source>Control Points</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DlgSplinePoints</name>
     <message>
         <source>SplinePoints</source>
@@ -110,6 +133,31 @@ distance between points=%2 is larger than diameter=%3</source>
     </message>
 </context>
 <context>
+    <name>LC_ActionDrawLinePoints</name>
+    <message>
+        <source>Specify distance (%1)
+or [%2]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>X</source>
+        <translation type="unfinished">X</translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="unfinished">Назад</translation>
+    </message>
+    <message>
+        <source>Y</source>
+        <translation type="unfinished">Y</translation>
+    </message>
+    <message>
+        <source>Specify  distance (angle %1 deg)
+or [%2]</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LC_ActionDrawLinePolygonCenTan</name>
     <message>
         <source>Specify center</source>
@@ -130,6 +178,122 @@ distance between points=%2 is larger than diameter=%3</source>
     <message>
         <source>Not a valid expression</source>
         <translation>Недопустимий вираз</translation>
+    </message>
+</context>
+<context>
+    <name>LC_ActionDrawLineSnake</name>
+    <message>
+        <source>Specify direction (x or y) or [%1]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="unfinished">Назад</translation>
+    </message>
+    <message>
+        <source>Specify distance (%1) or [%2]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>X</source>
+        <translation type="unfinished">X</translation>
+    </message>
+    <message>
+        <source>Y</source>
+        <translation type="unfinished">Y</translation>
+    </message>
+    <message>
+        <source>Specify distance (%1 deg) or [%2]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify angle or [%2]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify point or [%1]</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_ActionDrawParabola4Points</name>
+    <message>
+        <source>Specify the first point on parabola</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify the second point on parabola</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="unfinished">Назад</translation>
+    </message>
+    <message>
+        <source>Specify the third point on parabola</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify the fourth point on parabola</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify the Axis on parabola</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_ActionDrawParabolaFD</name>
+    <message>
+        <source>Specify the focus of parabola</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify the directrix of parabola</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="unfinished">Назад</translation>
+    </message>
+    <message>
+        <source>Specify the start point on parabola</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify the end point on parabola</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_ActionDrawSliceDivide</name>
+    <message>
+        <source> is not divided as it is locked.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> is not divided as it is part of polyline. Expand polyline first.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line</source>
+        <translation type="unfinished">Лінія</translation>
+    </message>
+    <message>
+        <source>Arc</source>
+        <translation type="unfinished">Дуга</translation>
+    </message>
+    <message>
+        <source>Circle</source>
+        <translation type="unfinished">Коло</translation>
     </message>
 </context>
 <context>
@@ -360,7 +524,7 @@ distance between points=%2 is larger than diameter=%3</source>
     </message>
     <message>
         <source>&amp;Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Ламана</translation>
     </message>
     <message>
         <source>&amp;Add node</source>
@@ -608,7 +772,7 @@ distance between points=%2 is larger than diameter=%3</source>
     </message>
     <message>
         <source>&amp;Rename Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">П&amp;ерейменувати усі блоки</translation>
     </message>
     <message>
         <source>&amp;Edit Block</source>
@@ -736,7 +900,7 @@ distance between points=%2 is larger than diameter=%3</source>
     </message>
     <message>
         <source>&amp;Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;За сіткою</translation>
     </message>
     <message>
         <source>Ctrl+G</source>
@@ -873,6 +1037,138 @@ distance between points=%2 is larger than diameter=%3</source>
         <source>Save A&amp;ll...</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Cross</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snake</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snake (X)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snake (Y)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rectangle (1 Point)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rectangle (2 Points)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rectangle (3 Points)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Star</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Break/Divide</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line Gap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle From Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Orthogonal From Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>From Point To Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slice/Divide Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slice/Divide Circle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line of Points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>By Arc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Para&amp;bola 4 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Parabola &amp;Focus Directrix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Pick Pen From Entity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Pick Pen From Entity (Resolved)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply Pen to Entity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line Join</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Duplicate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update Current Pen by Active Layer&apos; Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gen &amp;Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gen &amp;Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gen &amp;Diff Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gen and &amp;Send Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Config &amp;Network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Version Info</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LC_ActionFileExportMakerCam</name>
@@ -885,6 +1181,125 @@ distance between points=%2 is larger than diameter=%3</source>
     <name>LC_ActionLayersExport</name>
     <message>
         <source>Saving layer &quot;%1&quot; as &quot;%2&quot; </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_ActionPenApply</name>
+    <message>
+        <source>Specify entity to pick the pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify entity to apply pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_ActionPenPick</name>
+    <message>
+        <source>Specify entity to pick the pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_ActionSnapMiddleManual</name>
+    <message>
+        <source>Specify percentage / start-point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify start point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Specify end point</source>
+        <translation type="unfinished">Вкажіть кінцеву точку</translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="unfinished">Назад</translation>
+    </message>
+</context>
+<context>
+    <name>LC_CircleByArcOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Original</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Original Resolved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Radius Shift:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replace arc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pen:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_CrossOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Total Length</source>
+        <translation type="unfinished">Повна довжина</translation>
+    </message>
+    <message>
+        <source>Percent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>X:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -904,6 +1319,1221 @@ distance between points=%2 is larger than diameter=%3</source>
     </message>
 </context>
 <context>
+    <name>LC_DlgParabola</name>
+    <message>
+        <source>Parabola control points cannot be collinear</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_DuplicateOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>In Place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset X:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Original</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Original Resolved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset Y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pen:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_LayerDialogEx</name>
+    <message>
+        <source>Layer Settings</source>
+        <translation type="unfinished">Налаштування шару</translation>
+    </message>
+    <message>
+        <source>Parent Layers Path:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Informational</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dimensions</source>
+        <translation type="unfinished">Розміри</translation>
+    </message>
+    <message>
+        <source>Alternative Position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A Construction Layer has entities of infinite straight lines intended to be used for geometric construction.
+       The contents of a Construction Layer should not appear in printout.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Construction Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer Name:</source>
+        <translation type="unfinished">Назва шару:</translation>
+    </message>
+    <message>
+        <source>Rename Virtual Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add Secondary Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default Pen</source>
+        <translation type="unfinished">Перо за умовчанням:</translation>
+    </message>
+    <message>
+        <source>Rename Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_LayerTreeOptionsDialog</name>
+    <message>
+        <source>Layers Tree Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Naming Convention</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer Level Name Separator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Secondary Layer Suffixes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dimensional</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Informational</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alternative Position </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Duplicating Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Suffix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Display and Operations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show full name as ToolTip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show layer type icons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show indented layer names. Ident size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Allow restructuring via Drag&amp;Drop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rename secondary layers on primary rename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Matched item in highlight filter mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>#1E90FF</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Virtual layer background color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Threeview items separator grid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selected items background color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active layer background color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default Pens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Normal Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dimensional Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Informational Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alternative Position Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_LayerTreeWidget</name>
+    <message>
+        <source>Filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Looking for matching layer names</source>
+        <translation type="unfinished">Пошук відповідних назв шарів</translation>
+    </message>
+    <message>
+        <source>Highlight Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show all layers</source>
+        <translation type="unfinished">Показати усі шари</translation>
+    </message>
+    <message>
+        <source>Hide all layers</source>
+        <translation type="unfinished">Сховати усі шари</translation>
+    </message>
+    <message>
+        <source>Show Secondary Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Active Layer Only</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Expand All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Collapse All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Collapse Secondary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unlock all layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lock all layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add a layer</source>
+        <translation type="unfinished">Додати шар</translation>
+    </message>
+    <message>
+        <source>Add dimensions Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Modify layer attributes / rename</source>
+        <translation type="unfinished">Змінити/перейменувати атрибути шару</translation>
+    </message>
+    <message>
+        <source>Flat List Mode)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer Menu</source>
+        <translation type="unfinished">Меню шару</translation>
+    </message>
+    <message>
+        <source>&amp;Add Child Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Rename</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Remove Layers (Sub-Tree)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Copy Structure (Sub-Tree)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Duplicate Content (Sub-Tree)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Select Entities (Sub-Tree)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Edit Layer &amp;Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Remove Layer</source>
+        <translation type="unfinished">&amp;Вилучити шар</translation>
+    </message>
+    <message>
+        <source>&amp;Add Dimensions Sub-Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Add Info Sub-Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Add Alternative View Sub-Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Remove Sub-layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Convert to Dimensional Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Convert to Info Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Convert to Alternative Position Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Convert to Normal Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Select Layer&apos;s Entities</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Create Layer Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Duplicate Layer With Content</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Move Selection to Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Duplicate Selection to Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Add Layer</source>
+        <translation type="unfinished">&amp;Додати шар</translation>
+    </message>
+    <message>
+        <source>&amp;Freeze Others Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Defreeze All Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Freeze All Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Unlock All Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Lock All Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable &amp;Printing All Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Disable Printing All Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Find And Remove Empty Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_LineAngleRelOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Free</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="unfinished">Початок</translation>
+    </message>
+    <message>
+        <source>Middle</source>
+        <translation type="unfinished">Середина</translation>
+    </message>
+    <message>
+        <source>End</source>
+        <translation type="unfinished">Кінець</translation>
+    </message>
+    <message>
+        <source>Line Snap:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Divide</source>
+        <translation type="unfinished">Пунктир 2</translation>
+    </message>
+    <message>
+        <source>Tick Snap:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snap Distance:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_LineFromPointToLineOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Orthogonal</source>
+        <translation type="unfinished">Ортогональний</translation>
+    </message>
+    <message>
+        <source>To Intersection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed Length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>End offset:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="unfinished">Початок</translation>
+    </message>
+    <message>
+        <source>Middle</source>
+        <translation type="unfinished">Середина</translation>
+    </message>
+    <message>
+        <source>End</source>
+        <translation type="unfinished">Кінець</translation>
+    </message>
+    <message>
+        <source>Length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snap:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_LineJoinOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extend/Trim</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No change</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Polyline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Attributes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Both lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove originals</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line 2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line 1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_LinePointsOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fit Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished">Немає</translation>
+    </message>
+    <message>
+        <source>Both</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="unfinished">Початок</translation>
+    </message>
+    <message>
+        <source>End</source>
+        <translation type="unfinished">Кінець</translation>
+    </message>
+    <message>
+        <source>Edge Points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number of points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed Distance</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_ModifyBreakDivideOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove Segments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove Selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_ModifyGapOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gap Snap:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snap Distance:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Free</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gap Size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="unfinished">Початок</translation>
+    </message>
+    <message>
+        <source>Middle</source>
+        <translation type="unfinished">Середина</translation>
+    </message>
+    <message>
+        <source>End</source>
+        <translation type="unfinished">Кінець</translation>
+    </message>
+    <message>
+        <source>Line Snap:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_PenPaletteOptionsDialog</name>
+    <message>
+        <source>Pen Palette Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Columns to display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line Type Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Color Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line Type Icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Color Icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line Width Icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line Width Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Colors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Active Pen Background:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entire table row is bold for active pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Grid Color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Matched Item Color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Case-insensitive pens filtering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Controls whether tooltip will be shown for table item or not</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show tooltip for table items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pens file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show colorn name as</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HEX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RGB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Natural name where possible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show info message if no entities may be selected by pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>On double click on table item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do nothing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select entities by attributes pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select entities by drawing pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_PenPaletteWidget</name>
+    <message>
+        <source>Pen Palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pen Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Color:</source>
+        <translation type="unfinished">Колір:</translation>
+    </message>
+    <message>
+        <source>Filter...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highlight Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Width:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fill Pen Editor by Entity Drawing Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fill Pen Editor by Entity Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Entities By Drawing Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Entities By Pen Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply Pen To Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fill Editor Pen by Current Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply Editor Pen As Current Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>to current</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update Current Pen by Active Layer&apos; Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fill Pen Editor from Active Layer&apos;s Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pick from Active Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply Editor Pen to Active Layer Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apply To Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove Selected Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pens Menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Apply Pen To Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Set As Current Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Apply Pen To Active Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Select Entities With Attributes Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Select Entities With Drawing Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Edit Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Remove Pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Remove Pens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pen palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Location of pens file is changed, please restart the application so new pens file will be used.
+
+Please note that if you&apos;ll save pen via editor without restart, current pens from palette will be saved in the new file and therefore existing content of it will be overridden.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_Rectangle1PointOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Polyline</source>
+        <translation type="unfinished">Ламана</translation>
+    </message>
+    <message>
+        <source>Height:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edges:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corners:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Size inner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length X:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Radius:</source>
+        <translation type="unfinished">Радіус:</translation>
+    </message>
+    <message>
+        <source>Snap:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length Y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Top-left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Top</source>
+        <translation type="unfinished">Верхня</translation>
+    </message>
+    <message>
+        <source>Top-right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Middle</source>
+        <translation type="unfinished">Середина</translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bottom-left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bottom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bottom-right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Straight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Round</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bevel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snap shift</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Both</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vertical</source>
+        <translation type="unfinished">Вертикально</translation>
+    </message>
+    <message>
+        <source>Horizontal</source>
+        <translation type="unfinished">Горизонтальний</translation>
+    </message>
+    <message>
+        <source>Width:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Base Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LC_Rectangle2PointsOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snap shift</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Radius:</source>
+        <translation type="unfinished">Радіус:</translation>
+    </message>
+    <message>
+        <source>Edges:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Polyline</source>
+        <translation type="unfinished">Ламана</translation>
+    </message>
+    <message>
+        <source>End Snap:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corners:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length X:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start Snap:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mid-Vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mid-Horizontal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Middle</source>
+        <translation type="unfinished">Середина</translation>
+    </message>
+    <message>
+        <source>Base Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Straight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Round</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bevel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length Y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Both</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vertical</source>
+        <translation type="unfinished">Вертикально</translation>
+    </message>
+    <message>
+        <source>Horizontal</source>
+        <translation type="unfinished">Горизонтальний</translation>
+    </message>
+</context>
+<context>
+    <name>LC_Rectangle3PointsOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Polyline</source>
+        <translation type="unfinished">Ламана</translation>
+    </message>
+    <message>
+        <source>Both</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vertical</source>
+        <translation type="unfinished">Вертикально</translation>
+    </message>
+    <message>
+        <source>Horizontal</source>
+        <translation type="unfinished">Горизонтальний</translation>
+    </message>
+    <message>
+        <source>Edges:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Quadrangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed Base Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length X:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Straight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Round</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bevel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corners:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snap shift</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length Y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Radius:</source>
+        <translation type="unfinished">Радіус:</translation>
+    </message>
+    <message>
+        <source>Fixed Inner Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LC_SimpleTests</name>
     <message>
         <source>De&amp;bugging</source>
@@ -912,6 +2542,104 @@ distance between points=%2 is larger than diameter=%3</source>
     <message>
         <source>Insert Image</source>
         <translation type="unfinished">Вставити зображення</translation>
+    </message>
+</context>
+<context>
+    <name>LC_SliceDivideOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished">Немає</translation>
+    </message>
+    <message>
+        <source>Both</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="unfinished">Початок</translation>
+    </message>
+    <message>
+        <source>End</source>
+        <translation type="unfinished">Кінець</translation>
+    </message>
+    <message>
+        <source>Edge Tick:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Count:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start Circle Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tick Length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tick snap:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Divide</source>
+        <translation type="unfinished">Пунктир 2</translation>
+    </message>
+    <message>
+        <source>Middle</source>
+        <translation type="unfinished">Середина</translation>
+    </message>
+    <message>
+        <source>Fixed </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Distance:</source>
+        <translation type="unfinished">Відстань:</translation>
+    </message>
+</context>
+<context>
+    <name>LC_StarOptions</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Radius Inner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Polyline</source>
+        <translation type="unfinished">Ламана</translation>
+    </message>
+    <message>
+        <source>Radius Outer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Symmetric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number:</source>
+        <translation type="unfinished">Число:</translation>
     </message>
 </context>
 <context>
@@ -1017,6 +2745,10 @@ distance between points=%2 is larger than diameter=%3</source>
     </message>
     <message>
         <source>Use themed icons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left toolbar columns:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1651,12 +3383,36 @@ Please check its existence and permissions.</source>
         <source>&amp;Donate</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Please adjust scaling and positioning in print preview first.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pen Palette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer Tree</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Wedm</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QG_ActionHandler</name>
     <message>
         <source>escape</source>
         <comment>escape, go back from action steps</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spacebar: restored snapping mode to normal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spacebar: temporarily set snapping mode to free snapping</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1956,6 +3712,14 @@ in a separate window</source>
     </message>
 </context>
 <context>
+    <name>QG_DimOptions</name>
+    <message>
+        <source>R</source>
+        <comment>Radial dimension prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QG_DimensionLabelEditor</name>
     <message>
         <source>Dimension Label Editor</source>
@@ -1995,6 +3759,20 @@ in a separate window</source>
     </message>
     <message>
         <source>π (Pi)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Format of the dimension text, &amp;lt;&amp;gt; can be used as a placeholder for the dimension measurement value&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>R</source>
+        <comment>Radial dimension prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>R</source>
+        <comment>Radial dimesnion prefix</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2085,6 +3863,21 @@ This recursively modifies all entities of the Block itself.</source>
     </message>
 </context>
 <context>
+    <name>QG_DlgConfigNetwork</name>
+    <message>
+        <source>Network Config</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Target Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Target Port</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QG_DlgDimLinear</name>
     <message>
         <source>Linear Dimension</source>
@@ -2163,6 +3956,137 @@ This recursively modifies all entities of the Block itself.</source>
     </message>
 </context>
 <context>
+    <name>QG_DlgGenPath</name>
+    <message>
+        <source>Path Generation Config</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cut In</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Linear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Perpendicular</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Manual</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Residual</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Height</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wdith</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Program</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Absolute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Relative</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle</source>
+        <translation type="unfinished">Кут</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Process Parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Times</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use Param Index</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use Macro</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Electrical Param Index</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compensation Offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cut 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cut 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cut 3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cut 4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1 Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>2 Times</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>3 Times</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>4 Times</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ElecData%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CompData%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QG_DlgHatch</name>
     <message>
         <source>Choose Hatch Attributes</source>
@@ -2191,6 +4115,10 @@ This recursively modifies all entities of the Block itself.</source>
     <message>
         <source>Enable Preview</source>
         <translation>Включити перегляд</translation>
+    </message>
+    <message>
+        <source>Area</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3828,10 +5756,6 @@ Please choose the unit you want to use for new drawings and your preferred langu
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toggle free snap mode when the SPACE BAR is pressed and the command window is empty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Toggle free snap mode when SPACE BAR is pressed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3841,6 +5765,18 @@ Please choose the unit you want to use for new drawings and your preferred langu
     </message>
     <message>
         <source>Automatically zoom drawing when opening</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;-apple-system&apos;,&apos;BlinkMacSystemFont&apos;,&apos;Segoe UI&apos;,&apos;Noto Sans&apos;,&apos;Helvetica&apos;,&apos;Arial&apos;,&apos;sans-serif&apos;,&apos;Apple Color Emoji&apos;,&apos;Segoe UI Emoji&apos;; font-size:14px; color:#1f2328; background-color:#ffffff;&quot;&gt;Part library folder. The symbol library dxf files must be located in the subdirectories of this folder. The subfolder names will be displayed in the Library Browser.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:&apos;-apple-system&apos;,&apos;BlinkMacSystemFont&apos;,&apos;Segoe UI&apos;,&apos;Noto Sans&apos;,&apos;Helvetica&apos;,&apos;Arial&apos;,&apos;sans-serif&apos;,&apos;Apple Color Emoji&apos;,&apos;Segoe UI Emoji&apos;; font-size:14px; color:#1f2328; background-color:#ffffff;&quot;&gt;( Menu: Widgets &amp;gt; Dock Widgets &amp;gt; Library Browser)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open last opened files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Temporarily toggle free snapping when the spacebar is pressed and the command window is activated&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3936,6 +5872,18 @@ but ignored by other</source>
     <message>
         <source>Length of line pattern related to zoom, 
 so default step value required for baking</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export Points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Whether to export points</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4783,12 +6731,16 @@ so default step value required for baking</source>
         <translation>знову ж таки, не був наданий текст</translation>
     </message>
     <message>
-        <source>Close All</source>
+        <source>Close</source>
+        <translation type="obsolete">Закрити</translation>
+    </message>
+    <message>
+        <source>Discard All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Close</source>
-        <translation type="unfinished">Закрити</translation>
+        <source>Discard</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4864,6 +6816,10 @@ so default step value required for baking</source>
     <name>QG_GraphicView</name>
     <message>
         <source>Edit Properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit Block</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5415,6 +7371,10 @@ p, li { white-space: pre-wrap; }
         <source>unlocked</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Snap Middle Manual</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QG_WidgetPen</name>
@@ -5631,6 +7591,162 @@ This action can NOT be undone.</source>
     </message>
     <message>
         <source>Blocks for removal:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer empty name is not allowed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Attempt to create layer with duplicating name. Duplicated layer name is 
+[%1].
+Please specify a different name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer list separator string is empty. It will not be possible to build layers tree.
+Please specify a different value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid value provide for %1 color.
+Please specify a different value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove empty layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer(s) without entities found, yet they are filtered and not visible.
+
+Clear filtering mask and repeat.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No layers without entities found, nothing to remove.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Such child layer already exist for 
+[%1].
+Please specify a different name.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Such child layer already exist for 
+[%1].
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dimensional layer may be added only for normal active layer.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Move Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Duplicate Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replace &quot;By Layer&quot; value to source layers values?
+
+If Yes - entities with &quot;By Layer&quot; pens will look on new layer exactly as on previous layers and &quot;By Layer&quot; value will be replaced by resolved pens.
+
+If No - &quot;By Layer&quot; values remains and so pen of target layer will define pen for such entities.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer DialogEx</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid value provided for %1 color.
+Please specify a different value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invalid path to pens file.
+%1 
+Please specify a different value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove pen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pen will be removed from palette, drawing entities will not be affected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Are you sure you&apos;d like to proceed?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pen for removal:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove pens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pens will be removed from palette, drawing entities will not be affected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pens for removal:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select Entities </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There are no entities that matches pen on visible layers.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Such entities exist on frozen layers.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Such entities exist on locked layers.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please use different pen attributes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set pen by entity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please select only one entity to pick pen setting.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Saving Pens Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to save pens data to specified pens file. Would you like to specify correct path to the file?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6862,16 +8978,6 @@ Do you want to replace it?</source>
     <message>
         <source>Available commands:</source>
         <translation type="unfinished">Доступні команди:</translation>
-    </message>
-    <message>
-        <source>cal</source>
-        <comment>command to trigger cli calculator</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>calculate</source>
-        <comment>command to trigger cli calculator</comment>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>None</source>
@@ -8152,6 +10258,512 @@ Do you want to replace it?</source>
         <comment>default layer name</comment>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>R</source>
+        <comment>Radial dimension prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sline</source>
+        <comment>draw snake line</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sli</source>
+        <comment>draw snake line</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sl</source>
+        <comment>draw snake line</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>slinex</source>
+        <comment>draw snake line (X)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>slix</source>
+        <comment>draw snake line (X)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>rlx</source>
+        <comment>draw snake line (X)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sliney</source>
+        <comment>draw snake line (Y)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sliy</source>
+        <comment>draw snake line (Y)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>rly</source>
+        <comment>draw snake line (Y)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>rect1</source>
+        <comment>draw rectangle (1 Point)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>re1</source>
+        <comment>draw rectangle (1 Point)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>rect2</source>
+        <comment>draw rectangle (2 Points)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>re2</source>
+        <comment>draw rectangle (2 Points)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>rect3</source>
+        <comment>draw rectangle (3 Points)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>re3</source>
+        <comment>draw rectangle (3 Points)</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>slicel</source>
+        <comment>slice/divide line</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sll</source>
+        <comment>slice/divide line</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>slicec</source>
+        <comment>slice/divide circle/arc</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>slc</source>
+        <comment>slice/divide circle/arc</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>star</source>
+        <comment>draw star</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>st</source>
+        <comment>draw star</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cross</source>
+        <comment>draw cross for circle</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cx</source>
+        <comment>draw cross for circle</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>linepoints</source>
+        <comment>draw line of points</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>lpoints</source>
+        <comment>draw line of points</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>criclebyarc</source>
+        <comment>draw circle by arc</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cba</source>
+        <comment>draw circle by arc</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>duplicate</source>
+        <comment>duplicate entity</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>dup</source>
+        <comment>duplicate entity</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>linejoin</source>
+        <comment>lines join</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>lj</source>
+        <comment>lines join</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>breakdivide</source>
+        <comment>break or divide entity</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bd</source>
+        <comment>break or divide entity</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>gapline</source>
+        <comment>line gap</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>gl</source>
+        <comment>line gap</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>parabola4p</source>
+        <comment>Parabola 4 points</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>pl4</source>
+        <comment>Parabola 4 points</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>parabolafd</source>
+        <comment>Parabola focus directrix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>plfd</source>
+        <comment>Parabola focus directrix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>angleline</source>
+        <comment>draw angle from line</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>rortoline</source>
+        <comment>draw orthogonal</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>rort</source>
+        <comment>draw orthogonal</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>point2line</source>
+        <comment>draw line from point to line</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>p2l</source>
+        <comment>draw line from point to line</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>snapmiddlemanual</source>
+        <comment>snap middle manual</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>snapmanual</source>
+        <comment>snap middle manual</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>smm</source>
+        <comment>snap middle manual</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>x</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>p</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>anglerel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>linesnap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ticksnap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>height</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>pos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bevels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>nopoly</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>usepoly</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>corners</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>str</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>round</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>snap1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>topl</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>topr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>middle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bottoml</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bottom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bottomr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>snapcorner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>snapshift</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sizein</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sizeout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>hor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>vert</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>snap2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>corner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mid-vert</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mid-hor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>quad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>noquad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>angle_inner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>edges</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>edge-none</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>edge-both</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>edge-start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>edge-end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>both</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>none</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>fit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>nofit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>dist_fixed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>dist_flex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>distance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sym</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>nosym</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hatch:: no pattern found. Please set pattern path in application preferences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hatch:: loading pattern failed: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PenTB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wedm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>By Layer</source>
+        <translation type="unfinished">За шаром</translation>
+    </message>
+    <message>
+        <source>By Block</source>
+        <translation type="unfinished">За блоком</translation>
+    </message>
+    <message>
+        <source>- Unchanged -</source>
+        <translation type="unfinished">- Без змін -</translation>
+    </message>
+    <message>
+        <source>User Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cal </source>
+        <comment>command to trigger cli calculator</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>calculate </source>
+        <comment>command to trigger cli calculator</comment>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>RS_ActionBlocksCreate</name>
@@ -8222,6 +10834,86 @@ This block cannot be inserted.</source>
     <message>
         <source>No block activated to save</source>
         <translation>Не вибрано блок для збереження</translation>
+    </message>
+</context>
+<context>
+    <name>RS_ActionCamGenDiffPath</name>
+    <message>
+        <source>diff path generated</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select main path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select sub path</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RS_ActionCamGenPath</name>
+    <message>
+        <source>Select thread point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select entity</source>
+        <translation type="unfinished">Виберіть об’єкт</translation>
+    </message>
+    <message>
+        <source>Select move direction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select comp direction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select end point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select exit point</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RS_ActionCamGencode</name>
+    <message>
+        <source>Save G-code file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G-code files (*.txt)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G-code file saved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to save G-code file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select insert with cut data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G-code sent to CNC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to send G-code to CNC: </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RS_ActionCamUtils</name>
+    <message>
+        <source>Version: </source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9290,11 +11982,23 @@ This block cannot be inserted.</source>
     </message>
     <message>
         <source>Select first circle or ellipse</source>
-        <translation>Вкажіть перше коло чи еліпс</translation>
+        <translation type="vanished">Вкажіть перше коло чи еліпс</translation>
     </message>
     <message>
         <source>Select second circle or ellipse</source>
-        <translation>Вкажіть друге коло чи еліпс</translation>
+        <translation type="vanished">Вкажіть друге коло чи еліпс</translation>
+    </message>
+    <message>
+        <source>Select first circle/ellipse/parabola</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select second circle/ellipse/parabola</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select the tangent line closest to cursor</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10525,10 +13229,17 @@ This block cannot be inserted.</source>
     </message>
 </context>
 <context>
+    <name>RS_GraphicView</name>
+    <message>
+        <source>Draft</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>TextFileViewer</name>
     <message>
         <source>Frame</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Рамка</translation>
     </message>
 </context>
 <context>
@@ -10602,7 +13313,7 @@ This block cannot be inserted.</source>
     </message>
     <message>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Радіус:</translation>
     </message>
 </context>
 <context>
@@ -10617,7 +13328,7 @@ This block cannot be inserted.</source>
     </message>
     <message>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Радіус:</translation>
     </message>
     <message>
         <source>Radius of tangential circle</source>
@@ -10830,7 +13541,7 @@ This block cannot be inserted.</source>
     </message>
     <message>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Число:</translation>
     </message>
     <message>
         <source>Number of bisectors to create</source>
@@ -10869,6 +13580,65 @@ This block cannot be inserted.</source>
     </message>
 </context>
 <context>
+    <name>Ui_LineOptionsRel</name>
+    <message>
+        <source>Line Options</source>
+        <translation type="unfinished">Параметри лінії</translation>
+    </message>
+    <message>
+        <source>Direction:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Polyline</source>
+        <translation type="unfinished">Ламана</translation>
+    </message>
+    <message>
+        <source>Y</source>
+        <translation type="unfinished">Y</translation>
+    </message>
+    <message>
+        <source>Angle</source>
+        <translation type="unfinished">Кут</translation>
+    </message>
+    <message>
+        <source>X</source>
+        <translation type="unfinished">X</translation>
+    </message>
+    <message>
+        <source>Rel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Undo the last line drawing</source>
+        <translation type="unfinished">Скасувати останню накреслену лінію</translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished">Скасувати</translation>
+    </message>
+    <message>
+        <source>Form a closed contour from lines drawn</source>
+        <translation type="unfinished">Створити замкнений контур з існуючих ліній</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation type="unfinished">Закрити</translation>
+    </message>
+    <message>
+        <source>Redo the last line drawing</source>
+        <translation type="unfinished">Повторити останню накреслену лінію</translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished">Повторити</translation>
+    </message>
+    <message>
+        <source>Point</source>
+        <translation type="unfinished">Точка</translation>
+    </message>
+</context>
+<context>
     <name>Ui_LineParallelOptions</name>
     <message>
         <source>Line Parallel Options</source>
@@ -10884,7 +13654,7 @@ This block cannot be inserted.</source>
     </message>
     <message>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Число:</translation>
     </message>
     <message>
         <source>Number of parallels to create</source>
@@ -10899,7 +13669,7 @@ This block cannot be inserted.</source>
     </message>
     <message>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Число:</translation>
     </message>
     <message>
         <source>Number of parallels to create</source>
@@ -10914,7 +13684,7 @@ This block cannot be inserted.</source>
     </message>
     <message>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Число:</translation>
     </message>
     <message>
         <source>Number of edges</source>
@@ -10929,7 +13699,7 @@ This block cannot be inserted.</source>
     </message>
     <message>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Число:</translation>
     </message>
     <message>
         <source>Number of edges</source>
@@ -11032,7 +13802,7 @@ This block cannot be inserted.</source>
     </message>
     <message>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Радіус:</translation>
     </message>
     <message>
         <source>Angle:</source>
@@ -11081,6 +13851,10 @@ This block cannot be inserted.</source>
         <source>Calculate number of pages needed to contain the drawing</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;printed size : drawing size&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Ui_RoundOptions</name>
@@ -11098,7 +13872,7 @@ This block cannot be inserted.</source>
     </message>
     <message>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Радіус:</translation>
     </message>
 </context>
 <context>
@@ -11135,7 +13909,7 @@ This block cannot be inserted.</source>
     </message>
     <message>
         <source>Degree:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ступінь: </translation>
     </message>
     <message>
         <source>Closed</source>
@@ -11188,7 +13962,7 @@ This block cannot be inserted.</source>
     <name>WidgetCreator</name>
     <message>
         <source>Frame</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Рамка</translation>
     </message>
     <message>
         <source>&gt;</source>

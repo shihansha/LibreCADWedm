@@ -121,6 +121,8 @@
 #include "lc_lineanglereloptions.h"
 #include "lc_slicedivideoptions.h"
 #include "lc_rectangle1pointoptions.h"
+#include "qg_dlggenpath.h"
+#include "qg_dlgconfignetwork.h"
 
 namespace {
 
@@ -1720,6 +1722,21 @@ QString QG_DialogFactory::requestFileSaveAsDialog(const QString& caption /* = QS
                                                   QString* selectedFilter /* = 0 */) {
 
     return QFileDialog::getSaveFileName(parent, caption, dir, filter, selectedFilter);
+}
+
+bool QG_DialogFactory::requestEdmGenPathDialog(CAM_GenPathConfig& data) {
+    QG_DlgGenPath dlg(parent);
+    if (dlg.exec()) {
+        data = dlg.getData();
+        return true;
+    }
+    return false;
+}
+
+bool QG_DialogFactory::requestCamConfigNetworkDialog()
+{
+    QG_DlgConfigNetwork dlg(parent);
+    return (dlg.exec() == QDialog::Accepted);
 }
 
 /**

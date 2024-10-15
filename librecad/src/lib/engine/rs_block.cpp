@@ -35,6 +35,7 @@ RS_BlockData::RS_BlockData(const QString& _name,
 						   bool _frozen):
 	name(_name)
   ,basePoint(_basePoint)
+  ,mainString("")
   ,frozen(_frozen)
 {
 }

@@ -37,6 +37,7 @@ public:
     QActionGroup* view;
     QActionGroup* widgets;
     QActionGroup* pen;
+    QActionGroup* edm;
 
     QList<QActionGroup*> toolGroups();
     QMap<QString, QActionGroup*> allGroups();

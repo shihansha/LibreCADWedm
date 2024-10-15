@@ -246,7 +246,6 @@ LC_WidgetFactory::LC_WidgetFactory(QC_ApplicationWindow* main_win,
         << a_map["PenPickResolved"]
         << a_map["PenApply"]
         << a_map["PenCopy"];
-
 }
 
 
@@ -874,6 +873,21 @@ void LC_WidgetFactory::createMenus(QMenuBar* menu_bar)
     connect(windows_menu, SIGNAL(aboutToShow()),
             main_window, SLOT(slotWindowsMenuAboutToShow()));
 
+    // <[~ Wedm ~]>
+    QMenu* edm_menu = new QMenu(QC_ApplicationWindow::tr("&Wedm"), menu_bar);
+    edm_menu->setObjectName("edm_menu");
+    edm_menu->setTearOffEnabled(true);
+
+    edm_menu->addAction(a_map["EdmGenPath"]);
+    edm_menu->addAction(a_map["EdmGenDiffPath"]);
+    edm_menu->addSeparator();
+    edm_menu->addAction(a_map["EdmGenCode"]);
+    edm_menu->addAction(a_map["EdmGenAndSendCode"]);
+    edm_menu->addSeparator();
+    edm_menu->addAction(a_map["EdmUtilsConfigNetwork"]);
+    edm_menu->addSeparator();
+    edm_menu->addAction(a_map["EdmUtilsVersion"]);
+
     // <[~ Help ~]>
 
     QMenu* help_menu = new QMenu(QC_ApplicationWindow::tr("&Help"), menu_bar);
@@ -1021,5 +1035,6 @@ void LC_WidgetFactory::createMenus(QMenuBar* menu_bar)
 //    menu_bar->addMenu(block_menu);
     menu_bar->addMenu(widgets_menu);
     menu_bar->addMenu(windows_menu);
+    menu_bar->addMenu(edm_menu);
     menu_bar->addMenu(help_menu);
 }

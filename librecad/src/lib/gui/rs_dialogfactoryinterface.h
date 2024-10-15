@@ -70,6 +70,7 @@ struct RS_RotateData;
 struct RS_RoundData;
 struct RS_ScaleData;
 
+struct CAM_GenPathConfig;
 
 /**
  * Interface for objects that can create and show dialogs.
@@ -386,6 +387,10 @@ public:
      * a dialog for options how to export as MakeCAM SVG.
      */
     virtual bool requestOptionsMakerCamDialog() = 0;
+
+    virtual bool requestEdmGenPathDialog(CAM_GenPathConfig& data) = 0;
+
+    virtual bool requestCamConfigNetworkDialog() = 0;
 
     /**
      * This virtual method must be overwritten and must present

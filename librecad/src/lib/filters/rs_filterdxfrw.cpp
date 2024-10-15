@@ -341,6 +341,7 @@ void RS_FilterDXFRW::addBlock(const DRW_Block& data) {
             RS_Vector bp(data.basePoint.x, data.basePoint.y);
             RS_Block* block =
                 new RS_Block(graphic, RS_BlockData(name, bp, false ));
+            block->setMainString(QString::fromUtf8(data.mainString.c_str()));
             //block->setFlags(flags);
 
             if (graphic->addBlock(block)) {
@@ -1597,6 +1598,7 @@ void RS_FilterDXFRW::writeBlocks() {
             block.basePoint.x = blk->getBasePoint().x;
             block.basePoint.y = blk->getBasePoint().y;
             block.basePoint.z = blk->getBasePoint().z;
+            block.mainString = blk->getName().toUtf8().data();
             dxfW->writeBlock(&block);
             for (RS_Entity* e=blk->firstEntity(RS2::ResolveNone);
                  e; e=blk->nextEntity(RS2::ResolveNone)) {

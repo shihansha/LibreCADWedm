@@ -160,7 +160,10 @@ namespace RS2 {
         EntityOverlayBox,    /**< OverlayBox */
         EntityPreview,    /**< Preview Container */
         EntityPattern,
-        EntityOverlayLine
+        EntityOverlayLine,
+        EntityRefPoint,
+        EntityRefLine,
+
     };
 
 
@@ -435,6 +438,14 @@ namespace RS2 {
         ActionPenApply,
         ActionPenCopy,
         ActionPenSyncFromLayer,
+
+        ActionEdmGenCode,
+        ActionEdmGenPath,
+        ActionEdmGenDiffPath,
+        ActionEdmGenAndSendCode,
+        ActionEdmUtilsTest,
+        ActionEdmUtilsConfigNetwork,
+        ActionEdmUtilsVersion,
 
         /** Needed to loop through all actions */
         ActionLast

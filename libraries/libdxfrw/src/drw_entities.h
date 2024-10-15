@@ -467,6 +467,7 @@ public:
         flags = 0;
         name = "*U0";
         isEnd = false;
+        mainString = "";
     }
 
 protected:
@@ -476,6 +477,7 @@ protected:
 public:
     UTF8STRING name;             /*!< block name, code 2 */
     int flags;                   /*!< block type, code 70 */
+    UTF8STRING mainString;
 private:
     bool isEnd; //for dwg parsing
 };

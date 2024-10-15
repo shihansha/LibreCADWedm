@@ -970,6 +970,9 @@ bool DRW_Block::parseCode(int code, dxfReader *reader){
     case 70:
         flags = reader->getInt32();
         break;
+    case 1:
+        mainString = reader->getUtf8String();
+        break;
     default:
         return DRW_Point::parseCode(code, reader);
     }

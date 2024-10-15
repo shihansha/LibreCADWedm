@@ -1411,7 +1411,7 @@ bool dxfRW::writeBlock(DRW_Block *bk){
     if(version >= DRW::AC1014) {
         writeAppData(bk->appData);
     }
-    writer->writeString(1, "");
+    writer->writeString(1, bk->mainString);
 
     return true;
 }

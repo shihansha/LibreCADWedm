@@ -227,6 +227,9 @@ public:
 											const QString& filter = QString(),
 											QString* selectedFilter = 0) override;
 
+    bool requestEdmGenPathDialog(CAM_GenPathConfig& data) override;
+    bool requestCamConfigNetworkDialog() override;
+
 	void updateCoordinateWidget(const RS_Vector& abs, const RS_Vector& rel, bool updateFormat=false) override;
 	/**
 	 * \brief updateMouseWidget Called when an action has a mouse hint.

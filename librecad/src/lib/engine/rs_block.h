@@ -51,6 +51,10 @@ struct RS_BlockData {
 	 * using the insertion point of Insert entities.
 	 */
 	RS_Vector basePoint;
+    /**
+     * @brief mainString. Used to save custom data.
+     */
+    QString mainString;
 
 	bool frozen {false};              //!< Frozen flag
     mutable bool visibleInBlockList {true};   //!< Visible in block list
@@ -95,6 +99,10 @@ public:
      */
     QString getName() const {
 		return data.name;
+    }
+
+    QString getMainString() const {
+        return data.mainString;
     }
 
     /**
@@ -145,8 +153,12 @@ public:
     void setName(QString newName) {
         data.name = std::move(newName);
     }
-    
-	/**
+
+    void setMainString(QString newMainString) {
+        data.mainString = std::move(newMainString);
+    }
+
+    /**
      * @retval true if this block is frozen (invisible)
      * @retval false if this block isn't frozen (visible)
      */

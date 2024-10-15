@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QG_DlgGenPath</class>
+ <widget class="QDialog" name="QG_DlgGenPath">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>482</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>483</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Path Generation Config</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout" rowminimumheight="0,0,300,0">
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="gbCutInMethod">
+       <property name="title">
+        <string>Cut In</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="rbCutInDirect">
+          <property name="text">
+           <string>Linear</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rbCutInPerp">
+          <property name="text">
+           <string>Perpendicular</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rbCutInManual">
+          <property name="text">
+           <string>Manual</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QGroupBox" name="gbRemains">
+       <property name="title">
+        <string>Residual</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="sizeConstraint">
+         <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lblRemainHeight">
+            <property name="text">
+             <string>Height</string>
+            </property>
+            <property name="buddy">
+             <cstring>leRemainHeight</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="leRemainHeight"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lblRemainWidth">
+            <property name="text">
+             <string>Wdith</string>
+            </property>
+            <property name="buddy">
+             <cstring>leRemainWidth</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="leRemainWidth"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QGroupBox" name="gbProgramMethod">
+       <property name="title">
+        <string>Program</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QRadioButton" name="rbMethodAbs">
+          <property name="text">
+           <string>Absolute</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rbMethodRel">
+          <property name="text">
+           <string>Relative</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="3">
+      <widget class="QDialogButtonBox" name="dialogButtonBox">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="2">
+      <widget class="QGroupBox" name="gbTaperMethod">
+       <property name="title">
+        <string>Tape</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QRadioButton" name="rbTaperCancel">
+          <property name="text">
+           <string>Cancel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="lblTaperAngle">
+          <property name="text">
+           <string>Angle</string>
+          </property>
+          <property name="buddy">
+           <cstring>leTaperAngle</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLineEdit" name="leTaperAngle"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QRadioButton" name="rbTaperLeftSide">
+          <property name="text">
+           <string>Left</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QRadioButton" name="rbTaperRightSide">
+          <property name="text">
+           <string>Right</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="3">
+      <widget class="QGroupBox" name="gbElecParams">
+       <property name="title">
+        <string>Process Parameters</string>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>129</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="lblCutCount">
+           <property name="text">
+            <string>Times</string>
+           </property>
+           <property name="buddy">
+            <cstring>cbCutCount</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="cbCutCount"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>50</y>
+          <width>229</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QRadioButton" name="rbUseParamIndex">
+           <property name="text">
+            <string>Use Param Index</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="rbUseParamMacro">
+           <property name="text">
+            <string>Use Macro</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>80</y>
+          <width>316</width>
+          <height>125</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="glDataEdit">
+         <item row="0" column="1">
+          <widget class="QLabel" name="lblParamIndex">
+           <property name="text">
+            <string>Electrical Param Index</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="lblCompValue">
+           <property name="text">
+            <string>Compensation Offset</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="lblParamCut1">
+           <property name="text">
+            <string>Cut 1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="leElecCut1"/>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="leCompCut1"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="lblParamCut2">
+           <property name="text">
+            <string>Cut 2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="leElecCut2"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="leCompCut2"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="lblParamCut3">
+           <property name="text">
+            <string>Cut 3</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="leElecCut3"/>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="leCompCut3"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="lblParamCut4">
+           <property name="text">
+            <string>Cut 4</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="leElecCut4"/>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLineEdit" name="leCompCut4"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>rbCutInDirect</tabstop>
+  <tabstop>rbCutInPerp</tabstop>
+  <tabstop>rbCutInManual</tabstop>
+  <tabstop>rbTaperCancel</tabstop>
+  <tabstop>rbTaperLeftSide</tabstop>
+  <tabstop>rbTaperRightSide</tabstop>
+  <tabstop>leTaperAngle</tabstop>
+  <tabstop>rbMethodAbs</tabstop>
+  <tabstop>rbMethodRel</tabstop>
+  <tabstop>leRemainHeight</tabstop>
+  <tabstop>leRemainWidth</tabstop>
+  <tabstop>cbCutCount</tabstop>
+  <tabstop>rbUseParamIndex</tabstop>
+  <tabstop>rbUseParamMacro</tabstop>
+  <tabstop>leElecCut1</tabstop>
+  <tabstop>leElecCut2</tabstop>
+  <tabstop>leElecCut3</tabstop>
+  <tabstop>leElecCut4</tabstop>
+  <tabstop>leCompCut1</tabstop>
+  <tabstop>leCompCut2</tabstop>
+  <tabstop>leCompCut3</tabstop>
+  <tabstop>leCompCut4</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

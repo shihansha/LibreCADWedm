@@ -26,7 +26,7 @@ CONFIG += qt \
     verbose \
     depend_includepath
 
-QT += widgets printsupport
+QT += widgets printsupport network
 CONFIG += c++17
 *-g++ {
     QMAKE_CXXFLAGS += -fext-numeric-literals
@@ -106,6 +106,7 @@ INCLUDEPATH += \
     lib/modification \
     lib/printing \
     actions \
+    actions/cam \
     main \
     main/console_dxf2pdf \
     test \
@@ -113,6 +114,7 @@ INCLUDEPATH += \
     ui \
     ui/forms \
     ui/generic \
+    ui/dialogs/actions/cam \
     ../res
 
 RESOURCES += ../res/extui/extui.qrc
@@ -125,6 +127,21 @@ RESOURCES += ../../licenses/licenses.qrc
 # ################################################################################
 # Library
 HEADERS += \
+    actions/cam/cam_cutdata.h \
+    actions/cam/cam_cutdatabase.h \
+    actions/cam/cam_diffcutdata.h \
+    actions/cam/cam_gencode.h \
+    actions/cam/cam_genpathconfig.h \
+    actions/cam/cam_networkconfig.h \
+    actions/cam/cam_pathdata.h \
+    actions/cam/cam_pathgen.h \
+    actions/cam/cam_segment.h \
+    actions/cam/cam_utils2d.h \
+    actions/cam/cam_version.h \
+    actions/cam/rs_actioncamgendiffpath.h \
+    actions/cam/rs_actioncamgenpath.h \
+    actions/cam/rs_actioncamutils.h \
+    actions/cam/rs_actioncamgencode.h \
     actions/lc_abstractactionwithpreview.h \
     actions/lc_actiondrawlinefrompointtoline.h \
     actions/lc_actiondrawparabola4points.h \
@@ -281,9 +298,22 @@ HEADERS += \
     ui/forms/lc_rectangle1pointoptions.h \
     ui/forms/lc_rectangle3pointsoptions.h \
     actions/lc_abstractactiondrawline.h \
-    ui/forms/LC_DlgParabola.h
+    ui/forms/LC_DlgParabola.h \
+    ui/dialogs/actions/cam/qg_dlgconfignetwork.h \
+    ui/dialogs/actions/cam/qg_dlggenpath.h
 
 SOURCES += \
+    actions/cam/cam_cutdata.cpp \
+    actions/cam/cam_diffcutdata.cpp \
+    actions/cam/cam_gencode.cpp \
+    actions/cam/cam_networkconfig.cpp \
+    actions/cam/cam_pathgen.cpp \
+    actions/cam/cam_segment.cpp \
+    actions/cam/cam_utils2d.cpp \
+    actions/cam/rs_actioncamgendiffpath.cpp \
+    actions/cam/rs_actioncamgenpath.cpp \
+    actions/cam/rs_actioncamutils.cpp \
+    actions/cam/rs_actioncamgencode.cpp \
     actions/lc_abstractactiondrawrectangle.cpp \
     actions/lc_abstractactionwithpreview.cpp \
     actions/lc_actiondrawcirclebyarc.cpp \
@@ -429,7 +459,9 @@ SOURCES += \
     ui/forms/lc_rectangle3pointsoptions.cpp \
     ui/forms/lc_rectangle1pointoptions.cpp \
     ui/forms/lc_rectangle2pointsoptions.cpp \
-    ui/forms/lc_slicedivideoptions.cpp
+    ui/forms/lc_slicedivideoptions.cpp \
+    ui/dialogs/actions/cam/qg_dlgconfignetwork.cpp \
+    ui/dialogs/actions/cam/qg_dlggenpath.cpp
 
 # ################################################################################
 # Command
@@ -1026,7 +1058,9 @@ FORMS = ui/forms/qg_commandwidget.ui \
     ui/generic/textfileviewer.ui \
     ui/forms/lc_duplicateoptions.ui \
     ui/lc_penpaletteoptionsdialog.ui \
-    ui/lc_penpalettewidget.ui
+    ui/lc_penpalettewidget.ui \
+    ui/dialogs/actions/cam/qg_dlgconfignetwork.ui \
+    ui/dialogs/actions/cam/qg_dlggenpath.ui
 
 # ################################################################################
 # Main

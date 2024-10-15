@@ -60,7 +60,8 @@ public:
     static constexpr char const* grid              = "Gray";
     static constexpr char const* meta_grid         = "#404040";
     static constexpr char const* select            = "#A54747";
-    static constexpr char const* highlight         = "#739373";
+    //static constexpr char const* highlight         = "#739373";
+    static constexpr char const* highlight         = "#ffff00";
     static constexpr char const* start_handle      = "Cyan";
     static constexpr char const* handle            = "Blue";
     static constexpr char const* end_handle        = "Blue";

@@ -195,6 +195,12 @@
 #include "lc_actionmodifybreakdivide.h"
 #include "lc_actionmodifylinegap.h"
 
+#include "rs_actioncamgencode.h"
+#include "rs_actioncamgenpath.h"
+#include "rs_actioncamgendiffpath.h"
+#include "rs_actioncamutils.h"
+
+
 /**
  * Constructor
  */
@@ -2227,5 +2233,47 @@ void QG_ActionHandler::slotRedockWidgets()
 void QG_ActionHandler::slotDrawLinePoints(){
     setCurrentAction(RS2::ActionDrawLinePoints);
 }
+
+void QG_ActionHandler::slotEdmGenCode() {
+    auto a = new RS_ActionCamGencode(*document, *view);
+    view->setCurrentAction(a);
+}
+
+void QG_ActionHandler::slotEdmGenPath() {
+    auto a = new RS_ActionCamGenPath(*document, *view);
+    view->setCurrentAction(a);
+}
+
+void QG_ActionHandler::slotEdmGenDiffPath()
+{
+    auto a = new RS_ActionCamGenDiffPath(*document, *view);
+    view->setCurrentAction(a);
+}
+
+void QG_ActionHandler::slotEdmGenAndSendCode()
+{
+    auto a = new RS_ActionCamGencode(*document, *view, true);
+    view->setCurrentAction(a);
+}
+
+void QG_ActionHandler::slotEdmUtilsTest()
+{
+    auto a = new RS_ActionCamUtils(*document, *view, RS2::ActionType::ActionEdmUtilsTest);
+    view->setCurrentAction(a);
+}
+
+void QG_ActionHandler::slotEdmUtilsConfigNetwork()
+{
+    auto a = new RS_ActionCamUtils(*document, *view, RS2::ActionType::ActionEdmUtilsConfigNetwork);
+    view->setCurrentAction(a);
+}
+
+void QG_ActionHandler::slotEdmUtilsVersion()
+{
+    auto a = new RS_ActionCamUtils(*document, *view, RS2::ActionType::ActionEdmUtilsVersion);
+    view->setCurrentAction(a);
+}
+
+
 // EOF
 

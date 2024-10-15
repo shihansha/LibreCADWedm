@@ -23,7 +23,7 @@ set(CMAKE_AUTORCC ON)
 add_compile_definitions(DWGSUPPORT)
 add_compile_definitions(MUPARSER_STATIC)
 
-find_package(Qt5 COMPONENTS Gui Core Widgets PrintSupport SVG REQUIRED)
+find_package(Qt5 COMPONENTS Gui Core Widgets PrintSupport SVG Network REQUIRED)
 find_package(Boost REQUIRED COMPONENTS)
 
 #qt5_wrap_cpp(plugins/asciifile.cpp)
@@ -64,6 +64,8 @@ include_directories(librecad/src/test)
 include_directories(librecad/src/ui)
 include_directories(librecad/src/ui/forms)
 include_directories(librecad/src/ui/generic)
+include_directories(librecad/src/actions/cam)
+include_directories(librecad/src/ui/dialogs/actions/cam)
 #Temporary disabled for build
 #include_directories(plugins/align)
 #include_directories(plugins/asciifile)
@@ -1014,7 +1016,37 @@ add_executable(LibreCAD
         librecad/src/actions/lc_actionmodifylinegap.cpp
         librecad/src/ui/forms/lc_modifygapoptions.h
         librecad/src/ui/forms/lc_modifygapoptions.cpp
-        #        plugins/align/align.cpp
+        librecad/src/actions/cam/rs_actioncamgencode.cpp
+        librecad/src/actions/cam/rs_actioncamgencode.h
+        librecad/src/actions/cam/rs_actioncamgenpath.cpp
+        librecad/src/actions/cam/rs_actioncamgenpath.h
+        librecad/src/actions/cam/cam_segment.cpp
+        librecad/src/actions/cam/cam_segment.h
+        librecad/src/actions/cam/cam_pathgen.cpp
+        librecad/src/actions/cam/cam_pathgen.h
+        librecad/src/actions/cam/cam_utils2d.cpp
+        librecad/src/actions/cam/cam_utils2d.h
+        librecad/src/actions/cam/cam_pathdata.h
+        librecad/src/actions/cam/cam_cutdata.cpp
+        librecad/src/actions/cam/cam_cutdata.h
+        librecad/src/actions/cam/cam_genpathconfig.h
+        librecad/src/actions/cam/cam_gencode.cpp
+        librecad/src/actions/cam/cam_gencode.h
+        librecad/src/actions/cam/cam_cutdatabase.h
+        librecad/src/actions/cam/rs_actioncamgendiffpath.cpp
+        librecad/src/actions/cam/rs_actioncamgendiffpath.h
+        librecad/src/actions/cam/cam_networkconfig.cpp
+        librecad/src/actions/cam/cam_networkconfig.h
+        librecad/src/actions/cam/rs_actioncamutils.cpp
+        librecad/src/actions/cam/rs_actioncamutils.h
+        librecad/src/actions/cam/cam_version.h
+        librecad/src/actions/cam/rs_actoninterfacenew.cpp
+        librecad/src/actions/cam/rs_actoninterfacenew.h
+        librecad/src/ui/dialogs/actions/cam/qg_dlggenpath.cpp
+        librecad/src/ui/dialogs/actions/cam/qg_dlggenpath.h
+        librecad/src/ui/dialogs/actions/cam/qg_dlgconfignetwork.cpp
+        librecad/src/ui/dialogs/actions/cam/qg_dlgconfignetwork.h
+     #        plugins/align/align.cpp
 #        plugins/align/align.h
 #        plugins/asciifile/asciifile.cpp
 #        plugins/asciifile/asciifile.h
@@ -1041,4 +1073,4 @@ add_executable(LibreCAD
 )
 
 
-target_link_libraries(LibreCAD Qt5::Core Qt5::Widgets Qt5::Gui Qt5::PrintSupport Qt5::Svg)
+target_link_libraries(LibreCAD Qt5::Core Qt5::Widgets Qt5::Gui Qt5::PrintSupport Qt5::Svg Qt5::Network)

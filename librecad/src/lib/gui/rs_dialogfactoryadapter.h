@@ -70,7 +70,9 @@ public:
 	void requestOptionsGeneralDialog() override {}
 	void requestOptionsDrawingDialog(RS_Graphic&) override {}
 	bool requestOptionsMakerCamDialog() override {return false;}
-	QString requestFileSaveAsDialog(const QString&, const QString&, const QString&, QString*) override {return {};}
+    bool requestEdmGenPathDialog(CAM_GenPathConfig&) override {return false;}
+    bool requestCamConfigNetworkDialog() override {return false;}
+    QString requestFileSaveAsDialog(const QString&, const QString&, const QString&, QString*) override {return {};}
 	void updateCoordinateWidget(const RS_Vector& , const RS_Vector& , bool =false) override {}
 	void updateMouseWidget(const QString&, const QString&) override{}
 	void updateSelectionWidget(int, double) override {}

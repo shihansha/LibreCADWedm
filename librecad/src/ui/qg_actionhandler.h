@@ -292,6 +292,14 @@ public slots:
   void slotPenCopy();
   void slotPenSyncFromLayer();
 
+  void slotEdmGenCode();
+  void slotEdmGenPath();
+  void slotEdmGenDiffPath();
+  void slotEdmGenAndSendCode();
+  void slotEdmUtilsTest();
+  void slotEdmUtilsConfigNetwork();
+  void slotEdmUtilsVersion();
+
 private:
     // Type of draw order selected command
     RS2::ActionType orderType{RS2::ActionOrderTop};

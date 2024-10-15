@@ -518,8 +518,8 @@ RS_Vector RS_Circle::getNearestPointOnEntity(const RS_Vector& coord,
     }
 	RS_Vector vp(coord - data.center);
     double d(vp.magnitude());
-    if( d < RS_TOLERANCE ) return RS_Vector(false);
-	vp =data.center+vp*(data.radius/d);
+    if( d < RS_TOLERANCE ) return data.center + RS_Vector(data.radius,0.0);
+    vp =data.center+vp*(data.radius/d);
 //    RS_DEBUG->print(RS_Debug::D_ERROR, "circle(%g, %g), r=%g: distance to point (%g, %g)\n",data.center.x,data.center.y,coord.x,coord.y);
 
 	if(dist){

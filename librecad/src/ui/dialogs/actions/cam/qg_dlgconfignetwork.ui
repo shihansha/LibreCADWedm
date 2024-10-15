@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QG_DlgConfigNetwork</class>
+ <widget class="QDialog" name="QG_DlgConfigNetwork">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>287</width>
+    <height>130</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Network Config</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="lblTargetAddr">
+       <property name="text">
+        <string>Target Address</string>
+       </property>
+       <property name="buddy">
+        <cstring>leTargetAddr</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="leTargetAddr"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Target Port</string>
+       </property>
+       <property name="buddy">
+        <cstring>leTargetPort</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="leTargetPort"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::StandardButton::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>QG_DlgConfigNetwork</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>227</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>QG_DlgConfigNetwork</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leTargetAddr</sender>
+   <signal>editingFinished()</signal>
+   <receiver>QG_DlgConfigNetwork</receiver>
+   <slot>targetAddressChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>210</x>
+     <y>30</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leTargetPort</sender>
+   <signal>editingFinished()</signal>
+   <receiver>QG_DlgConfigNetwork</receiver>
+   <slot>targetPortChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>targetAddressChanged()</slot>
+  <slot>targetPortChanged()</slot>
+ </slots>
+</ui>

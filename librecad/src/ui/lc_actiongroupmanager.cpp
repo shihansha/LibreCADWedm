@@ -60,6 +60,7 @@ LC_ActionGroupManager::LC_ActionGroupManager(QC_ApplicationWindow *parent)
     , view(new QActionGroup(this))
     , widgets(new QActionGroup(this))
     , pen(new QActionGroup(this))
+    , edm(new QActionGroup(this))
 {
     block->setObjectName(QObject::tr("Block"));
     circle->setObjectName(QObject::tr("Circle"));
@@ -82,6 +83,7 @@ LC_ActionGroupManager::LC_ActionGroupManager(QC_ApplicationWindow *parent)
     view->setObjectName(QObject::tr("View"));
     widgets->setObjectName(QObject::tr("Widgets"));
     pen->setObjectName(QObject::tr("PenTB"));
+    edm->setObjectName(QObject::tr("Wedm"));
 
     foreach (auto const& ag, findChildren<QActionGroup*>()) {
         ag->setExclusive(false);

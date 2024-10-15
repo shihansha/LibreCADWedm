@@ -1637,4 +1637,38 @@ void LC_ActionFactory::commonActions(QMap<QString, QAction*>& a_map, LC_ActionGr
     action->setCheckable(false);
     a_map["PenSyncFromLayer"] = action;
 
+    action = new QAction(tr("Gen &Code"), agm->edm);
+    connect(action, SIGNAL(triggered()), action_handler, SLOT(slotEdmGenCode()));
+    action->setObjectName("EdmGenCode");
+    a_map["EdmGenCode"] = action;
+
+    action = new QAction(tr("Gen &Path"), agm->edm);
+    connect(action, SIGNAL(triggered()), action_handler, SLOT(slotEdmGenPath()));
+    action->setObjectName("EdmGenPath");
+    a_map["EdmGenPath"] = action;
+
+    action = new QAction(tr("Gen &Diff Path"), agm->edm);
+    connect(action, SIGNAL(triggered()), action_handler, SLOT(slotEdmGenDiffPath()));
+    action->setObjectName("EdmGenDiffPath");
+    a_map["EdmGenDiffPath"] = action;
+
+    action = new QAction(tr("Gen and &Send Code"), agm->edm);
+    connect(action, SIGNAL(triggered()), action_handler, SLOT(slotEdmGenAndSendCode()));
+    action->setObjectName("EdmGenAndSendCode");
+    a_map["EdmGenAndSendCode"] = action;
+
+    action = new QAction(tr("&Test"), agm->edm);
+    connect(action, SIGNAL(triggered()), action_handler, SLOT(slotEdmUtilsTest()));
+    action->setObjectName("EdmUtilsTest");
+    a_map["EdmUtilsTest"] = action;
+
+    action = new QAction(tr("Config &Network"), agm->edm);
+    connect(action, SIGNAL(triggered()), action_handler, SLOT(slotEdmUtilsConfigNetwork()));
+    action->setObjectName("EdmUtilsConfigNetwork");
+    a_map["EdmUtilsConfigNetwork"] = action;
+
+    action = new QAction(tr("&Version Info"), agm->edm);
+    connect(action, SIGNAL(triggered()), action_handler, SLOT(slotEdmUtilsVersion()));
+    action->setObjectName("EdmUtilsVersion");
+    a_map["EdmUtilsVersion"] = action;
 }
