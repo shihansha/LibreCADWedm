@@ -11,18 +11,29 @@ QString CAM_GenCode::generateGCode(QList<CAM_CutDataBase *> dataArr, QList<RS_Ve
 
     RS_Vector curPt;
 
-    for (int i = 0; i < dataArr.count(); i++) {
-        if (curPt.valid) {
-            mainSb.append("# Move to next path...\n");
-            mainSb.append("G91;\n");
-            mainSb.append(QString("G00X%1Y%2;\n")
-                  .arg(toFixed(round(startPts[i].x) - round(curPt.x)),
-                       toFixed(round(startPts[i].y) - round(curPt.y))));
-            mainSb.append("\n");
-        }
-        curPt = startPts[i];
+    // 预处理 dataArr, 以应对可能以原始路径返回起割点的情况
+    QList<RS_Vector> outStartPts;
+    QList<CAM_CutDataBase *> newDataArr = prehandleData(dataArr, startPts, outStartPts);
 
-        CAM_CutDataBase *data = dataArr[i];
+    for (int i = 0; i < newDataArr.count(); i++) {
+        if (curPt.valid) {
+            mainSb.append("M00; \n");
+            double jumpDistXRounded = round(outStartPts[i].x) - round(curPt.x);
+            double jumpDistYRounded = round(outStartPts[i].y) - round(curPt.y);
+            if (jumpDistXRounded != 0 || jumpDistYRounded != 0) {
+                // 距离都是零，则不需要跳转，否则执行跳转
+                mainSb.append("# Move to next path...\n");
+                mainSb.append("G91;\n");
+                mainSb.append(QString("G00X%1Y%2;\n")
+                              .arg(toFixed(jumpDistXRounded),
+                                   toFixed(jumpDistYRounded)));
+                mainSb.append("M00;\n");
+                mainSb.append("\n");
+            }
+        }
+        curPt = outStartPts[i];
+
+        CAM_CutDataBase *data = newDataArr[i];
         if (data->getCutType() == CAM_CutDataBase::CutType::CutData) {
             CAM_CutData *cutData = (CAM_CutData *)data;
             if (cutData->getGenPathConfig().useAbsCommand) {
@@ -31,6 +42,12 @@ QString CAM_GenCode::generateGCode(QList<CAM_CutDataBase *> dataArr, QList<RS_Ve
             else {
                 mainSb.append(genOneCutCodeRelMainPart(*cutData, i * 2 + 1));
                 subSb.append(genOneCutCodeRelSubPart(*cutData, i * 2 + 1));
+            }
+
+            if (cutData->getGenPathConfig().cutTime % 2 == 1 && !cutData->getPathData().isClosed) {
+                // 既不封闭图形，又是奇数次切割，会停留在exitPt, 无法返回curPt(threadPt)
+                RS_Vector threadToExit = cutData->getPathData().exitPt - cutData->getPathData().threadPt;
+                curPt += threadToExit;
             }
         }
         else if (data->getCutType() == CAM_CutDataBase::CutType::DiffCutData) {
@@ -42,8 +59,21 @@ QString CAM_GenCode::generateGCode(QList<CAM_CutDataBase *> dataArr, QList<RS_Ve
                 mainSb.append(genDiffCutCodeRelMainPart(*diffCutData, i * 2 + 1));
                 subSb.append(genDiffCutCodeRelSubPart(*diffCutData, i * 2 + 1));
             }
+
+            if (diffCutData->getMainPathCutData().getGenPathConfig().cutTime % 2 == 1 && !diffCutData->getMainPathCutData().getPathData().isClosed) {
+                // 既不封闭图形，又是奇数次切割，会停留在exitPt, 无法返回curPt(threadPt)
+                RS_Vector threadToExit = diffCutData->getMainPathCutData().getPathData().exitPt - diffCutData->getMainPathCutData().getPathData().threadPt;
+                curPt += threadToExit;
+            }
         }
 
+    }
+
+    // 删除在预处理中被我们额外增加的路径
+    for (int i = 0; i < newDataArr.count(); i++) {
+        if (!dataArr.contains(newDataArr[i])) {
+            delete newDataArr[i];
+        }
     }
 
     QStringList sb;
@@ -316,7 +346,7 @@ QStringList CAM_GenCode::genOneCutCodeAbs(const CAM_CutData &data)
             sb.append(QString("E%1").arg(data.getGenPathConfig().elecData[0]));
         }
 
-        if (data.getGenPathConfig().cutTime == 1) {
+        if (data.getGenPathConfig().cutTime % 2 == 1) {
             // 奇数次切割，从终点切起点
             curPt += data.getPathData().cutOffPt - data.getPathData().exitPt;
             sb.append(QString("G01X%1Y%2;\n")
@@ -347,6 +377,15 @@ QStringList CAM_GenCode::genOneCutCodeAbs(const CAM_CutData &data)
         sb.append(QString("G00X%1Y%2;\n")
                       .arg(toFixed(round(curPt.x)),
                            toFixed(round(curPt.y))));
+    }
+    else {
+        if (data.getGenPathConfig().cutTime % 2 == 0) {
+            // 不封闭图形，偶数次切割可以回穿丝点
+            curPt += data.getPathData().threadPt - data.getPathData().cutOffPt;
+            sb.append(QString("G00X%1Y%2;\n")
+                          .arg(toFixed(round(curPt.x)),
+                               toFixed(round(curPt.y))));
+        }
     }
 
     sb.append("\n");
@@ -524,6 +563,14 @@ QStringList CAM_GenCode::genOneCutCodeRelMainPart(const CAM_CutData &data, int s
         sb.append(QString("G00X%1Y%2;\n")
                       .arg(toFixed(round(data.getPathData().threadPt.x) - round(data.getPathData().cutOffPt.x)),
                            toFixed(round(data.getPathData().threadPt.y) - round(data.getPathData().cutOffPt.y))));
+    }
+    else {
+        if (data.getGenPathConfig().cutTime % 2 == 0) {
+            // 不封闭图形，偶数次切割可以回穿丝点
+            sb.append(QString("G00X%1Y%2;\n")
+                          .arg(toFixed(round(data.getPathData().threadPt.x) - round(data.getPathData().cutOffPt.x)),
+                               toFixed(round(data.getPathData().threadPt.y) - round(data.getPathData().cutOffPt.y))));
+        }
     }
 
     sb.append("\n");
@@ -869,6 +916,23 @@ QStringList CAM_GenCode::genDiffCutCodeAbs(const CAM_DiffCutData &data)
         }
     }
     else {
+        if (data.getMainPathCutData().getGenPathConfig().cutTime % 2 == 1) {
+            if (useMacro) {
+                sb.append(QString("E`ELEC_CUT%1").arg(0 + 1));
+            }
+            else {
+                sb.append(QString("E%1").arg(data.getMainPathCutData().getGenPathConfig().elecData[0]));
+            }
+
+            // 奇数次切割，副轴也并入主轴退出点
+            curUV += data.getMainPathCutData().getPathData().exitPt - data.getSubPathCutData().getPathData().exitPt;
+            sb.append(QString("G01X%1Y%2:G01X%3Y%4;\n")
+                          .arg(toFixed(round(curXY.x)),
+                               toFixed(round(curXY.y)),
+                               toFixed(round(curUV.x)),
+                               toFixed(round(curUV.y))));
+        }
+
         sb.append("M18;\n");
     }
 
@@ -881,6 +945,18 @@ QStringList CAM_GenCode::genDiffCutCodeAbs(const CAM_DiffCutData &data)
                            toFixed(round(curXY.y)),
                            toFixed(round(curUV.x)),
                            toFixed(round(curUV.y))));
+    }
+    else {
+        if (data.getMainPathCutData().getGenPathConfig().cutTime % 2 == 0) {
+            // 不封闭图形，偶数次切割可以回穿丝点
+            curXY += data.getMainPathCutData().getPathData().threadPt - data.getMainPathCutData().getPathData().cutOffPt;
+            curUV += data.getSubPathCutData().getPathData().threadPt - data.getSubPathCutData().getPathData().cutOffPt;
+            sb.append(QString("G00X%1Y%2:G00X%3Y%4;\n")
+                          .arg(toFixed(round(curXY.x)),
+                               toFixed(round(curXY.y)),
+                               toFixed(round(curUV.x)),
+                               toFixed(round(curUV.y))));
+        }
     }
 
     sb.append("\n");
@@ -1005,6 +1081,21 @@ QStringList CAM_GenCode::genDiffCutCodeRelMainPart(const CAM_DiffCutData &data, 
         }
     }
     else {
+        if (data.getMainPathCutData().getGenPathConfig().cutTime % 2 == 1) {
+            if (useMacro) {
+                sb.append(QString("E`ELEC_CUT%1").arg(0 + 1));
+            }
+            else {
+                sb.append(QString("E%1").arg(data.getMainPathCutData().getGenPathConfig().elecData[0]));
+            }
+
+            // 奇数次切割，副轴也并入主轴退出点
+            sb.append(QString("G01X%1Y%2:G01X%3Y%4;\n")
+                          .arg(0,
+                               0,
+                               toFixed(round(data.getMainPathCutData().getPathData().exitPt.x) - round(data.getSubPathCutData().getPathData().exitPt.x)),
+                               toFixed(round(data.getMainPathCutData().getPathData().exitPt.y) - round(data.getSubPathCutData().getPathData().exitPt.y))));
+        }
         sb.append("M18;\n");
     }
 
@@ -1015,6 +1106,16 @@ QStringList CAM_GenCode::genDiffCutCodeRelMainPart(const CAM_DiffCutData &data, 
                            toFixed(round(data.getMainPathCutData().getPathData().threadPt.y) - round(data.getMainPathCutData().getPathData().cutOffPt.y)),
                            toFixed(round(data.getSubPathCutData().getPathData().threadPt.x) - round(data.getSubPathCutData().getPathData().cutOffPt.x)),
                            toFixed(round(data.getSubPathCutData().getPathData().threadPt.y) - round(data.getSubPathCutData().getPathData().cutOffPt.y))));
+    }
+    else {
+        if (data.getMainPathCutData().getGenPathConfig().cutTime % 2 == 0) {
+            // 不封闭图形，偶数次切割可以回穿丝点
+            sb.append(QString("G00X%1Y%2:G00X%3Y%4;\n")
+                          .arg(toFixed(round(data.getMainPathCutData().getPathData().threadPt.x) - round(data.getMainPathCutData().getPathData().cutOffPt.x)),
+                               toFixed(round(data.getMainPathCutData().getPathData().threadPt.y) - round(data.getMainPathCutData().getPathData().cutOffPt.y)),
+                               toFixed(round(data.getSubPathCutData().getPathData().threadPt.x) - round(data.getSubPathCutData().getPathData().cutOffPt.x)),
+                               toFixed(round(data.getSubPathCutData().getPathData().threadPt.y) - round(data.getSubPathCutData().getPathData().cutOffPt.y))));
+        }
     }
 
     sb.append("\n");
@@ -1155,6 +1256,88 @@ QStringList CAM_GenCode::genDiffCutCodeRelSubPart(const CAM_DiffCutData &data, i
     }
 
     return sb;
+}
+
+QList<CAM_CutDataBase *> CAM_GenCode::prehandleData(QList<CAM_CutDataBase *> &dataArr, const QList<RS_Vector> &startPts, QList<RS_Vector> &outStartPts)
+{
+    QList<CAM_CutDataBase *> result;
+    for (int i = 0; i < dataArr.count(); i++) {
+        CAM_CutDataBase *data = dataArr[i];
+        RS_Vector startPt = startPts[i];
+
+        if (data->getCutType() == CAM_CutDataBase::CutType::CutData) {
+            CAM_CutData *cutData = (CAM_CutData *)(data);
+            QList<CAM_CutDataBase *> prehandled = prehandleOneCutData(cutData);
+            result.append(prehandled);
+            outStartPts.append(startPt);
+            if (prehandled.count() > 1) {
+                CAM_CutData *cloned = (CAM_CutData *)prehandled[1];
+                RS_Vector threadPt = startPt + cloned->getPathData().threadPt - cutData->getPathData().threadPt;
+                outStartPts.append(threadPt);
+            }
+        }
+        else {
+            result.append(data);
+            outStartPts.append(startPt);
+        }
+    }
+    return result;
+}
+
+QList<CAM_CutDataBase *> CAM_GenCode::prehandleOneCutData(CAM_CutData *cutData)
+{
+    QList<CAM_CutDataBase *> result;
+    // 是否为奇数次切割
+    bool isOdd = cutData->getGenPathConfig().cutTime % 2;
+
+    if (cutData->getPathData().isClosed && cutData->getPathData().closePathExists && cutData->getGenPathConfig().useOrgPathAsRemainWidth) {
+        cutData->getPathDataMutable().isClosed = false;
+
+        CAM_CutData *cloned = new CAM_CutData(*cutData);
+
+        auto &genPathConfig = cloned->getGenPathConfigMutable();
+        auto &pathData = cloned->getPathDataMutable();
+        genPathConfig.cutTime = 1;
+        pathData.mainPath.clear();
+
+        if (isOdd) {
+            RS_Vector oldStart = pathData.startPt;
+            RS_Vector oldEnd = pathData.endPt;
+            RS_Vector oldThread = pathData.threadPt;
+            RS_Vector oldExit = pathData.exitPt;
+
+            pathData.startPt = oldEnd;
+            pathData.endPt = oldStart;
+            pathData.threadPt = oldExit;
+            pathData.cutOffPt = oldExit;
+            pathData.exitPt = oldThread;
+
+            for (int i = 0; i < pathData.closePath.count(); i++) {
+                CAM_Segment seg = pathData.closePath[i];
+                pathData.mainPath.append(seg);
+            }
+
+        }
+        else {
+            for (int i = pathData.closePath.count() - 1; i >= 0; i--) {
+                CAM_Segment seg = pathData.closePath[i];
+                pathData.mainPath.append(CAM_Segment(seg.getEndPt(), seg.getStartPt(), -seg.getBulge()));
+            }
+
+            pathData.compensateDir = !pathData.compensateDir;
+            if (genPathConfig.tapeEnabled) {
+                genPathConfig.tapeAngle = -genPathConfig.tapeAngle;
+            }
+        }
+
+        result.append(cutData);
+        result.append(cloned);
+    }
+    else {
+        result.append(cutData);
+    }
+
+    return result;
 }
 
 

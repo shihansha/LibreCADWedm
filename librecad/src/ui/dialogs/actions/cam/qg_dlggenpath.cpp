@@ -42,6 +42,7 @@ void QG_DlgGenPath::readSettings() {
             genPathData.tapeAngle = 0;
         genPathData.paramUseMacro = RS_SETTINGS->readNumEntry("ParamUseMacro", true);
         genPathData.useAbsCommand = RS_SETTINGS->readNumEntry("UseAbsCommand");
+        genPathData.useOrgPathAsRemainWidth = RS_SETTINGS->readNumEntry("UseOrgPathAsRemainWidth");
         RS_SETTINGS->endGroup();
     }
 }
@@ -146,6 +147,8 @@ void QG_DlgGenPath::initControls() {
     compData3Str.setNum(genPathData.compData[3]);
     ui->leCompCut4->setText(compData3Str);
 
+    if (genPathData.useOrgPathAsRemainWidth) ui->cbUseOrgPathAsRemainWidth->setCheckState(Qt::Checked);
+    else ui->cbUseOrgPathAsRemainWidth->setCheckState(Qt::Unchecked);
 }
 
 void QG_DlgGenPath::RecvCutMethodMode(int id)
@@ -452,5 +455,19 @@ void QG_DlgGenPath::on_leCompCut3_editingFinished()
 void QG_DlgGenPath::on_leCompCut4_editingFinished()
 {
     compChangedHandler(3);
+}
+
+
+
+void QG_DlgGenPath::on_cbUseOrgPathAsRemainWidth_stateChanged(int arg1)
+{
+    bool isChecked = arg1 == Qt::Checked;
+    if (genPathData.useOrgPathAsRemainWidth != isChecked) {
+        genPathData.useOrgPathAsRemainWidth = isChecked;
+
+        RS_SETTINGS->beginGroup(GROUP_NAME);
+        RS_SETTINGS->writeEntry("UseOrgPathAsRemainWidth", isChecked);
+        RS_SETTINGS->endGroup();
+    }
 }
 

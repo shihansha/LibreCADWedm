@@ -4094,6 +4094,10 @@ Esto modifica recursivamente todas las entidades del propio Bloque.</translation
         <source>CompData%1</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Use original path as remain width</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QG_DlgHatch</name>

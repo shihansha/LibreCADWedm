@@ -30,6 +30,10 @@ private:
     QStringList genDiffCutCodeAbs(const CAM_DiffCutData &diffCutData);
     QStringList genDiffCutCodeRelMainPart(const CAM_DiffCutData &diffCutData, int startSubIndex);
     QStringList genDiffCutCodeRelSubPart(const CAM_DiffCutData &diffCutData, int startSubIndex);
+
+    QList<CAM_CutDataBase *> prehandleData(QList<CAM_CutDataBase *> &dataArr, const QList<RS_Vector> &startPts, QList<RS_Vector> &outStartPts);
+    QList<CAM_CutDataBase *> prehandleOneCutData(CAM_CutData *cutData);
+
 };
 
 #endif // CAM_GENCODE_H

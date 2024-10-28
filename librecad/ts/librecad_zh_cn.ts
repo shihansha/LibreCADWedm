@@ -5003,132 +5003,137 @@ This recursively modifies all entities of the Block itself.</source>
         <translation>残留</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="72"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="67"/>
+        <source>Use original path as remain width</source>
+        <translation>残留段走原始路径</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="79"/>
         <source>Height</source>
         <translation>残留高</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="92"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="99"/>
         <source>Wdith</source>
         <translation>残留宽</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="110"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="117"/>
         <source>Program</source>
         <translation>编程方式</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="116"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="123"/>
         <source>Absolute</source>
         <translation>绝对编程</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="123"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="130"/>
         <source>Relative</source>
         <translation>相对编程</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="140"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="147"/>
         <source>Tape</source>
         <translation>锥度</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="146"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="153"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="153"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="160"/>
         <source>Angle</source>
         <translation>角度</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="166"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="173"/>
         <source>Left</source>
         <translation>左倾</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="173"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="180"/>
         <source>Right</source>
         <translation>右倾</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="183"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="190"/>
         <source>Process Parameters</source>
         <translation>工艺数据</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="201"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="208"/>
         <source>Times</source>
         <translation>切割次数</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="226"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="233"/>
         <source>Use Param Index</source>
         <translation>使用参数号</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="233"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="240"/>
         <source>Use Macro</source>
         <translation>使用宏</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="252"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="259"/>
         <source>Electrical Param Index</source>
         <translation>电参数号</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="259"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="266"/>
         <source>Compensation Offset</source>
         <translation>偏移量</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="266"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="273"/>
         <source>Cut 1</source>
         <translation>第一刀</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="279"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="286"/>
         <source>Cut 2</source>
         <translation>第二刀</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="292"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="299"/>
         <source>Cut 3</source>
         <translation>第三刀</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="305"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="312"/>
         <source>Cut 4</source>
         <translation>第四刀</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="112"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="113"/>
         <source>1 Time</source>
         <translation>一次切割</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="113"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="114"/>
         <source>2 Times</source>
         <translation>二次切割</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="114"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="115"/>
         <source>3 Times</source>
         <translation>三次切割</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="115"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="116"/>
         <source>4 Times</source>
         <translation>四次切割</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="383"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="386"/>
         <source>ElecData%1</source>
         <translation>ElecData%1</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="404"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="407"/>
         <source>CompData%1</source>
         <translation>CompData%1</translation>
     </message>
@@ -13562,32 +13567,32 @@ This block cannot be inserted.</source>
 <context>
     <name>RS_ActionCamGenPath</name>
     <message>
-        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="525"/>
+        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="543"/>
         <source>Select thread point</source>
         <translation>选择穿丝点</translation>
     </message>
     <message>
-        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="529"/>
+        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="547"/>
         <source>Select entity</source>
         <translation>选择开始点</translation>
     </message>
     <message>
-        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="533"/>
+        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="551"/>
         <source>Select move direction</source>
         <translation>选择切割方向</translation>
     </message>
     <message>
-        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="537"/>
+        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="555"/>
         <source>Select comp direction</source>
         <translation>选择偏移方向</translation>
     </message>
     <message>
-        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="541"/>
+        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="559"/>
         <source>Select end point</source>
         <translation>选择终点</translation>
     </message>
     <message>
-        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="545"/>
+        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="563"/>
         <source>Select exit point</source>
         <translation>选择退出点</translation>
     </message>

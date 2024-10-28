@@ -60,6 +60,9 @@ double CAM_Utils2D::pointSegmentDistance(const RS_Vector &pt, const CAM_Segment 
         double c = pointDistance(spt, ept);
         double p = (a + b + c) / 2;
         double s = sqrt(p * (p - a) * (p - b) * (p - c));
+        if (isnan(s)) {
+            s = 0; // helen formula may return NaN because of precision
+        }
 
         if (c < EPSILON) {
             return a < b ? a : b;
@@ -69,6 +72,8 @@ double CAM_Utils2D::pointSegmentDistance(const RS_Vector &pt, const CAM_Segment 
 
         double disStart = sqrt(abs(a * a - disFoot * disFoot)); // 点到起始点的距离
         double disEnd = sqrt(abs(b * b - disFoot * disFoot)); // 点到终点的距离
+        if (isnan(disStart)) disStart = 0;
+        if (isnan(disEnd)) disEnd = 0;
 
         if (disStart > c || disEnd > c) {
             return a < b ? a : b;

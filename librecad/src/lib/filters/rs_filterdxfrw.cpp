@@ -1598,7 +1598,7 @@ void RS_FilterDXFRW::writeBlocks() {
             block.basePoint.x = blk->getBasePoint().x;
             block.basePoint.y = blk->getBasePoint().y;
             block.basePoint.z = blk->getBasePoint().z;
-            block.mainString = blk->getName().toUtf8().data();
+            block.mainString = blk->getMainString().toUtf8().data();
             dxfW->writeBlock(&block);
             for (RS_Entity* e=blk->firstEntity(RS2::ResolveNone);
                  e; e=blk->nextEntity(RS2::ResolveNone)) {

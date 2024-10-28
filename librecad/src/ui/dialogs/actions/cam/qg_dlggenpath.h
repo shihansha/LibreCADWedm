@@ -66,6 +66,8 @@ private slots:
 
     void on_leCompCut4_editingFinished();
 
+    void on_cbUseOrgPathAsRemainWidth_stateChanged(int arg1);
+
 private:
     Ui::QG_DlgGenPath *ui;
 };

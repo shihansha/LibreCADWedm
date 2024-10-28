@@ -24,6 +24,8 @@ public:
     bool isInitialized() { return initialized; }
     const CAM_PathData &getPathData() const { return pathData; }
     const CAM_GenPathConfig &getGenPathConfig() const { return genPathConfig; }
+    CAM_PathData &getPathDataMutable() { return pathData; }
+    CAM_GenPathConfig &getGenPathConfigMutable() { return genPathConfig; }
 private:
     bool initialized;
     CAM_PathData pathData;

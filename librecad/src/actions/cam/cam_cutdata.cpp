@@ -49,7 +49,7 @@ RS_Insert *CAM_CutData::createBlockObject()
     RS_Line *startLine = new RS_Line(container, pathData.cutOffPt, pathData.startPt);
     RS_Line *exitLine = new RS_Line(container, pathData.endPt, pathData.exitPt);
     RS_Line *cutOffLine = nullptr;
-    if (pathData.isClosed) {
+    if (pathData.isClosed && !(genPathConfig.useOrgPathAsRemainWidth && pathData.closePathExists)) {
         cutOffLine = new RS_Line(container, pathData.exitPt, pathData.cutOffPt);
     }
 
@@ -75,6 +75,15 @@ RS_Insert *CAM_CutData::createBlockObject()
     }
     mainPathPolyline->addVertex(pathData.mainPath.last().getEndPt());
 
+    RS_Polyline *cutOffPolyline = nullptr;
+    if (genPathConfig.useOrgPathAsRemainWidth && pathData.closePathExists) {
+        cutOffPolyline = new RS_Polyline(container);
+        for (const CAM_Segment &seg: pathData.closePath) {
+            cutOffPolyline->addVertex(seg.getStartPt(), seg.getBulge());
+        }
+        cutOffPolyline->addVertex(pathData.closePath.last().getEndPt());
+    }
+
     enterLine->setPen(linePen);
     startLine->setPen(linePen);
     exitLine->setPen(linePen);
@@ -85,6 +94,9 @@ RS_Insert *CAM_CutData::createBlockObject()
     arrowDown->setPen(magentaPen);
     arrowUp->setPen(magentaPen);
     mainPathPolyline->setPen(linePen);
+    if (cutOffPolyline != nullptr) {
+        cutOffPolyline->setPen(linePen);
+    }
 
     container->addEntity(enterLine);
     container->addEntity(startLine);
@@ -96,6 +108,9 @@ RS_Insert *CAM_CutData::createBlockObject()
     container->addEntity(arrowDown);
     container->addEntity(arrowUp);
     container->addEntity(mainPathPolyline);
+    if (cutOffPolyline != nullptr) {
+        container->addEntity(cutOffPolyline);
+    }
 
     RS_Selection selection(*container, graphicView);
     selection.selectSingle(enterLine);
@@ -108,6 +123,9 @@ RS_Insert *CAM_CutData::createBlockObject()
     selection.selectSingle(arrowDown);
     selection.selectSingle(arrowUp);
     selection.selectSingle(mainPathPolyline);
+    if (cutOffPolyline != nullptr) {
+        selection.selectSingle(cutOffPolyline);
+    }
 
     QString blockName;
     int counter = 0;
@@ -212,6 +230,15 @@ QString CAM_CutData::serialize()
     obj["compensateDir"] = pathData.compensateDir;
     obj["paramUseMacro"] = genPathConfig.paramUseMacro;
     obj["useAbsCommand"] = genPathConfig.useAbsCommand;
+    obj["useOrgPathAsRemainWidth"] = genPathConfig.useOrgPathAsRemainWidth;
+    obj["closePathExists"] = pathData.closePathExists;
+    if (genPathConfig.useOrgPathAsRemainWidth && pathData.closePathExists) {
+        QJsonArray closePathArray;
+        for (const CAM_Segment &seg: pathData.closePath) {
+            closePathArray.append(serializeSegment(seg));
+        }
+        obj["closePath"] = closePathArray;
+    }
 
     QString str = QString(QJsonDocument(obj).toJson(QJsonDocument::JsonFormat::Compact));
     return str;
@@ -266,6 +293,14 @@ bool CAM_CutData::deserialize(QString data) {
     pathData.compensateDir = obj["compensateDir"].toBool();
     genPathConfig.paramUseMacro = obj["paramUseMacro"].toBool();
     genPathConfig.useAbsCommand = obj["useAbsCommand"].toBool();
+    genPathConfig.useOrgPathAsRemainWidth = obj["useOrgPathAsRemainWidth"].toBool();
+    pathData.closePathExists = obj["closePathExists"].toBool();
+    if (genPathConfig.useOrgPathAsRemainWidth && pathData.closePathExists) {
+        QJsonArray closePathArray = obj["closePath"].toArray();
+        for (const QJsonValue &val: closePathArray) {
+            pathData.closePath.append(deserializeSegment(val.toObject()));
+        }
+    }
     return true;
 }
 

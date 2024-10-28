@@ -468,6 +468,21 @@ bool RS_ActionCamGenPath::handleClosedPath(const RS_Vector &threadPt, const RS_V
         return false;
     }
 
+    QList<CAM_Segment> closePath; // 关闭路径
+    bool closePathExists = false;
+    if (remainWidth != 0) {
+        closePathExists = pathGen.searchPath(rawPath, startPt, startPt * 2 - dirPt, endPt, closePath);
+        if (closePathExists) {
+            // 反向路径
+            QList<CAM_Segment> reversedClosePath;
+            for (int i = closePath.size() - 1; i >= 0; i--) {
+                CAM_Segment seg = closePath[i];
+                reversedClosePath.append(CAM_Segment(seg.getEndPt(), seg.getStartPt(), -seg.getBulge()));
+            }
+            closePath = reversedClosePath;
+        }
+    }
+
     RS_Vector compVec = compPt - startPt;
     double dirInvInCross = dirVec.x * compVec.y - dirVec.y * compVec.x;
     bool compDir = dirInvInCross >= 0;
@@ -481,6 +496,8 @@ bool RS_ActionCamGenPath::handleClosedPath(const RS_Vector &threadPt, const RS_V
     pathData.cutOffPt = cutOffPt;
     pathData.mainPath = path;
     pathData.compensateDir = compDir;
+    pathData.closePathExists = closePathExists;
+    pathData.closePath = closePath;
 
     CAM_CutData cutData(pathData, setupArgs, container, graphicView);
     cutData.createBlockObject();
@@ -514,6 +531,7 @@ bool RS_ActionCamGenPath::handleUnclosedPath(const RS_Vector &threadPt, const RS
     pathData.cutOffPt = cutOffPt;
     pathData.mainPath = path;
     pathData.compensateDir = compDir;
+    pathData.closePathExists = false;
 
     CAM_CutData cutData(pathData, setupArgs, container, graphicView);
     cutData.createBlockObject();

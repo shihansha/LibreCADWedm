@@ -17,6 +17,7 @@ struct CAM_GenPathConfig {
     double tapeAngle;
     bool paramUseMacro;
     bool useAbsCommand;
+    bool useOrgPathAsRemainWidth;
 };
 
 #endif // CAM_GENPATHCONFIG_H

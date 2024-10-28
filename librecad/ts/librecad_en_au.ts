@@ -4995,132 +4995,137 @@ This recursively modifies all entities of the Block itself.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="72"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="67"/>
+        <source>Use original path as remain width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="79"/>
         <source>Height</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="92"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="99"/>
         <source>Wdith</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="110"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="117"/>
         <source>Program</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="116"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="123"/>
         <source>Absolute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="123"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="130"/>
         <source>Relative</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="140"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="147"/>
         <source>Tape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="146"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="153"/>
         <source>Cancel</source>
         <translation type="unfinished">Cancel</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="153"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="160"/>
         <source>Angle</source>
         <translation type="unfinished">Angle</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="166"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="173"/>
         <source>Left</source>
         <translation type="unfinished">Left</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="173"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="180"/>
         <source>Right</source>
         <translation type="unfinished">Right</translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="183"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="190"/>
         <source>Process Parameters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="201"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="208"/>
         <source>Times</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="226"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="233"/>
         <source>Use Param Index</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="233"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="240"/>
         <source>Use Macro</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="252"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="259"/>
         <source>Electrical Param Index</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="259"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="266"/>
         <source>Compensation Offset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="266"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="273"/>
         <source>Cut 1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="279"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="286"/>
         <source>Cut 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="292"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="299"/>
         <source>Cut 3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="305"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.ui" line="312"/>
         <source>Cut 4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="112"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="113"/>
         <source>1 Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="113"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="114"/>
         <source>2 Times</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="114"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="115"/>
         <source>3 Times</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="115"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="116"/>
         <source>4 Times</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="383"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="386"/>
         <source>ElecData%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="404"/>
+        <location filename="../src/ui/dialogs/actions/cam/qg_dlggenpath.cpp" line="407"/>
         <source>CompData%1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13534,32 +13539,32 @@ This block cannot be inserted.</source>
 <context>
     <name>RS_ActionCamGenPath</name>
     <message>
-        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="525"/>
+        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="543"/>
         <source>Select thread point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="529"/>
+        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="547"/>
         <source>Select entity</source>
         <translation type="unfinished">Select entity</translation>
     </message>
     <message>
-        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="533"/>
+        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="551"/>
         <source>Select move direction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="537"/>
+        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="555"/>
         <source>Select comp direction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="541"/>
+        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="559"/>
         <source>Select end point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="545"/>
+        <location filename="../src/actions/cam/rs_actioncamgenpath.cpp" line="563"/>
         <source>Select exit point</source>
         <translation type="unfinished"></translation>
     </message>
